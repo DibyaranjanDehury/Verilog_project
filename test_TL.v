@@ -1,10 +1,4 @@
-// fpga4student.com FPGA projects, VHDL projects, Verilog project
-// Verilog project: Verilog code for traffic light controller
 `timescale 10 ns/ 1 ps
-// 2. Preprocessor Directives
-`define DELAY 1
-// 3. Include Statements
-//`include "counter_define.h"
 module tb_traffic;
 // 4. Parameter definitions
 parameter ENDTIME  = 4000000;
@@ -17,7 +11,6 @@ wire [2:0] light_farm;
 // 6. DUT Output wires
 wire [2:0] light_highway;
 
-// fpga4student.com FPGA projects, VHDL projects, Verilog projects
 // 7. DUT Instantiation
 traffic_light tb(light_highway, light_farm, sensor, clk, rst_n);
 
@@ -59,7 +52,6 @@ task reset_gen;
  end
 endtask
 
-// fpga4student.com FPGA projects, VHDL projects, Verilog projects
 task operation_flow;
  begin
  sensor = 0;
@@ -78,7 +70,6 @@ task debug_output;
  end
 endtask
 
-// fpga4student.com FPGA projects, VHDL projects, Verilog projects
 //12. Determines the simulation limit
 task endsimulation;
  begin
